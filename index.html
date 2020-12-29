@@ -1,92 +1,12 @@
-<style>
-
-  #c{
-    position: fixed;
-    top: 100;
-    left: 10;
-    background: gray;
-    height: 100px;
-    width:50px;
-    border:10px;
-    border-color: honeydew;
-
-  }
-  #d{
-    position: fixed;
-    background: gray;
-    top: 100;
-    left: 70;
-    height: 100px;
-    width:50px;
-  }
-
-  #e{
-    position: fixed;
-    background: gray;
-    top: 100;
-    left: 130;
-    height: 100px;
-    width:50px;
-  }
-
-  #f{
-    position: fixed;
-    background: gray;
-    top: 100;
-    left: 190;
-    height: 100px;
-    width:50px;
-  }
-
-  #g{
-    position: fixed;
-    background: gray;
-    top: 100;
-    left: 250;
-    height: 100px;
-    width:50px;
-  }
-
-  #a{
-    position: fixed;
-    background: gray;
-    top: 100;
-    left: 310;
-    height: 100px;
-    width:50px;
-  }
-
-  #b{
-    position: fixed;
-    background: gray;
-    top: 100;
-    left: 370;
-    height: 100px;
-    width:50px;
-  }
-
-  #c2{
-    position: fixed;
-    background: gray;
-    top: 100;
-    left: 430;
-    height: 100px;
-    width:50px;
-  }
-
-  
-
-
-
-
-
-</style>
 
 <html> 
 
+<script src="script.js"></script>
+<link rel="stylesheet" href="styles.css">
+
 <h1> Play the piano!</h1>
 
-<div id="keys" onclick="playNote()">
+<div id="keys" onclick="highlight()">
   <div id="c"></div>
   <div id="d"></div>
   <div id="e"></div>
@@ -97,59 +17,15 @@
   <div id="c2"></div>
 </div>
 
-<script>
-
-document.onkeydown = checkKey;
-
-function checkKey(e){
-
-  switch(e.keyCode){
-
-
-    case 83: 
-    console.log("C plays");
-    document.getElementById("c").style.background = "blue";
-    document.getElementById("c").style.background.onkeyup = "green"
-    break;
-
-    case 68: 
-    console.log("d plays");
-    document.getElementById("d").style.background = "blue";
-    break;
-
-    case 70: console.log("e plays")
-    break;
-    
-    case 71: console.log("f plays")
-    break;
-
-    case 72: console.log("g plays")
-    break;
-
-    case 74: console.log("a plays")
-    break;
-
-    case 75: console.log("b plays")
-    break;
-
-    case 76: console.log("c2 plays")
-    break;
+<h2> Note:</h2> 
+<h3 id="currentNote"></h3>
 
 
 
 
 
 
-  }
 
-
-
-
-
-}
-
-
-</script>
 
 
 
